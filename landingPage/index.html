@@ -20,9 +20,9 @@
             <div class="inner">
                 <h3 class="masthead-brand">Africode</h3>
                 <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Contact</a>
-                    <a class="nav-link" href="#">Our Team</a>
+                    <a class="nav-link bar" href="#">Home</a>
+                    <a class="nav-link bar" href="#">Contact</a>
+                    <a class="nav-link bar" href="#">Our Team</a>
                 </nav>
             </div>
         </header>
@@ -44,10 +44,28 @@
             </div>
         </footer>
     </div>
+    <style>
+        .white {
+            color: #fff !important;
+        }
+    </style>
     <script>
         window.addEventListener("load", (even) => {
             let box = document.querySelector(".box")
             box.classList.add("blur")
+        })
+        let bars = document.querySelectorAll(".bar")
+        bars.forEach(e => {
+            bars[0].classList.add("white")
+            e.addEventListener("mouseover", () => {
+                bars[0].classList.remove("white")
+                e.classList.add("under")
+            })
+            e.addEventListener("mouseout", () => {
+                e.classList.remove("under")
+                bars[0].classList.add("white")
+
+            })
         })
     </script>
 </body>

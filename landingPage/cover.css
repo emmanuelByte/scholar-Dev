@@ -11,6 +11,11 @@ a:hover {
     color: #fff;
 }
 
+.under {
+    border-bottom: 2.5px solid #fff !important;
+    color: #fff !important;
+}
+
 
 /* Custom default button */
 
